@@ -1,0 +1,41 @@
+const {DataTypes}=require('sequelize');
+const db = require('../config/db');
+
+module.exports =db.define('Tecnico',{
+    nombre:{
+        type: DataTypes.STRING(30),
+        allowNull:false
+    },
+    apellido:{
+        type: DataTypes.STRING(20),
+        allowNull:false
+    },
+    cedula:{
+        type: DataTypes.STRING(10),
+        allowNull: false
+    },
+    fecha_nacimiento:{
+        type: DataTypes.STRING(20),
+        allowNull: false
+    },
+    ciudad:{
+        type: DataTypes.STRING(20),
+        allowNull: false
+    },
+    direccion:{
+        type: DataTypes.STRING(20),
+        allowNull:false
+    },
+    telefono:{
+        type: DataTypes.STRING(10),
+        allowNull:false
+    },
+    email:{
+        type: DataTypes.STRING(30),
+        allowNull:false
+    },
+    genero:{
+        type: DataTypes.STRING(20),
+        allowNull:false
+    }
+},{tableName: 'tecnicos', timestamps: false});
