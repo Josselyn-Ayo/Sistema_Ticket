@@ -40,7 +40,7 @@ async function main() {
         await db.sync({ force: false });
         console.log('✅ Base de datos de Tickets sincronizada');
         app.listen(3000, () => console.log('🚀 Servidor en http://localhost:3000'));
-    } catch (e) {
+    }catch (e) {
         console.error(e);
     }
 }
